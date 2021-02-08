@@ -40,6 +40,10 @@ type Query{
 type Mutation{
     createPropietario(cedula: Int!, nombre: String!, apellido: String!, rol: String!): Propietario!
 
+    updatePropietario(cedula: Int!, nombre: String!, apellido: String!, rol: String!): Propietario!
+
+    deletePropietario: Propietario!
+
     createFactura(concepto: String!, descripcion: String!, monto: Int!): Factura!
 
     createLugarOcio(nombre: String!, estado: String!): LugarOcio!

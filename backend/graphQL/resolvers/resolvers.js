@@ -32,6 +32,20 @@ const resolvers = {
         async createPropietario(root, { cedula, nombre, apellido, rol }, { models }){
             return await models.propietario.create( {cedula, nombre, apellido, rol} )
         },
+        async deletePropietario(root, args, { models }){
+            return await models.propietario.destroy ({
+                where: {
+                    nombre: "Luis"
+                }
+            })
+        },
+        async updatePropietario(root, {cedula, nombre, apellido, rol}, { models }){
+            return await models.propietario.update({ cedula: 1, nombre: "2", apellido: "3", rol: "4" },{
+                where: {
+                    
+                }
+            })
+        },
         
 
 // Mutation de Factura
